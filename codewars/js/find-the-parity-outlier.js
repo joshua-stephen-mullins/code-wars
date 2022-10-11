@@ -36,6 +36,7 @@ function findOutlier(arrayInput){
 
 
 console.log(findOutlier([2, 4, 12, 100, 4, 11, 2602, 36]));
+console.log(findOutlier([3, 1, 17, 2, 44, 1000, -3, -35, -100000000007, -20, -44, 1, 0]));
 console.log(findOutlier([-1, -44, -33]));
 console.log(findOutlier([-2, -4, -12, -100, -4, -11, -2602, -36]));
 console.log(findOutlier([3, 12, 15, 101, 555, 77, 35, 99]));
