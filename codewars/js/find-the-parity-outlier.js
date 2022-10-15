@@ -24,7 +24,7 @@
 //trying with absolute values
 
 function findOutlier(arrayInput){
-    let arrayOddSorted =  arrayInput.sort((a, b) => Math.abs(b % 2) - Math.abs(a % 2) || a - b);
+    let arrayOddSorted = arrayInput.sort((a, b) => Math.abs(b % 2) - Math.abs(a % 2) || a - b);
     if (arrayOddSorted[0] % 2 !== arrayOddSorted[1] % 2){
         return arrayOddSorted[0];
     } else {
