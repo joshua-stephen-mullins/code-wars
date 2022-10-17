@@ -1,12 +1,22 @@
 'use script';
 
+// function isSquare(n){
+//     if (n < 0){
+//         return false + n + ': Negative numbers cannot be square numbers'
+//     } else if (Math.sqrt(n) == Math.sqrt(n).toFixed()) {
+//         return n + " is a square number " + "(" + Math.sqrt(n) + " * " + Math.sqrt(n) + ')';
+//     } else {
+//         return n + " is not a square number";
+//     }
+// }
+
 function isSquare(n){
     if (n < 0){
-        return false + n + ': Negative numbers cannot be square numbers'
+        return false;
     } else if (Math.sqrt(n) == Math.sqrt(n).toFixed()) {
-        return n + " is a square number " + "(" + Math.sqrt(n) + " * " + Math.sqrt(n) + ')';
+        return true;
     } else {
-        return n + " is not a square number";
+        return false;
     }
 }
 
