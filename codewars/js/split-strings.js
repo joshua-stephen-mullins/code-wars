@@ -7,15 +7,29 @@
 // * 'abcdef' => ['ab', 'cd', 'ef']
 
 
+// function splitString(str){
+//     str = str.split("");
+//     let strAdd = "";
+//     for (let i = 0; i < str.length; i += 2){
+//          strAdd += str[i] + str[1] + ",";
+//     } return strAdd
+// }
+
 function splitString(str){
-    str = str.split("");
     let strAdd = "";
     for (let i = 0; i < str.length; i += 2){
-         strAdd += str[i] + str[1] + ",";
-    } return strAdd
+        strAdd += str.substring([i], i + 2) + ",";
+    }
+    console.log(strAdd);
+    let strAddSplit = strAdd.split(",");
+    for (let j = 0; i < strAddSplit.length; j++) {
+        if (j[i].length < 1){
+            strAddSplit = strAddSplit.pop();
+        } else if (j[i].length === 1) {
+            return strAddSplit
+        }
+    }
 }
-
-
 
 
 console.log(splitString("abcdefg")); // ["ab", "cd", "ef", "g_"]
