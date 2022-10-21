@@ -22,10 +22,11 @@ function splitString(str){
     }
     console.log(strAdd);
     let strAddSplit = strAdd.split(",");
-    for (let j = 0; i < strAddSplit.length; j++) {
-        if (j[i].length < 1){
+    console.log(strAddSplit);
+    for (let j = 0; j < strAddSplit.length; j++) {
+        if (strAddSplit[j].length < 1){
             strAddSplit = strAddSplit.pop();
-        } else if (j[i].length === 1) {
+        } else if (strAddSplit[j].length === 1) {
             return strAddSplit
         }
     }
