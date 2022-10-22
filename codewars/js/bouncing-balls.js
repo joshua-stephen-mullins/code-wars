@@ -26,15 +26,23 @@
 
 function bouncingBall(h, bounce, window){
     let ballHeight = h;
-    if (h <= 0 || bounce < 0 || bounce > 1 || window > h){
+    let i = 0;
+    if (h <= 0 || bounce < 0 || bounce >= 1 || window >= h){
         return -1;
     } else {
-        for (let i = 0; ballHeight < window; i++){
-            ballHeight += (h - bounce)
-        }
-    } return ballHeight
+        do {
+            ballHeight = (ballHeight * bounce);
+            i++;
+        } while (ballHeight > window);
+    } return i * 2 -1;
 }
+
+
 
 console.log(bouncingBall(3.0, 0.66, 1.5)); //3
 console.log(bouncingBall(3.0, 1, 1.5)); //-1
 console.log(bouncingBall(30, .66, 1.5)); //15
+console.log(bouncingBall(2, .5, 1)); //1
+console.log(bouncingBall(30, .4, 10)); //3
+console.log(bouncingBall(4, .25, 1)); //1
+console.log(bouncingBall(10, .6, 10)); //1
