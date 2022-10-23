@@ -25,8 +25,7 @@
 // consecutive strings : follow one after another without an interruption
 
 function longestConsec(strarr, k) {
-    console.log(strarr.length);
-    if (strarr.length === 0 || k < strarr.length || k <= 0){
+    if (strarr.length === 0 || k > strarr.length || k <= 0){
         return "";
     }
     let elementLengths = [];
@@ -42,4 +41,5 @@ function longestConsec(strarr, k) {
 }
 
 
-console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)) // "abigailtheta")
+console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)) // "abigailtheta"
+console.log(longestConsec(["it","wkppv","ixoyx", "3452", "zzzzzzzzzzzz"], 3)) // "ixoyx3452zzzzzzzzzzzz"
