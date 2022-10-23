@@ -24,3 +24,22 @@
 // Note
 // consecutive strings : follow one after another without an interruption
 
+function longestConsec(strarr, k) {
+    console.log(strarr.length);
+    if (strarr.length === 0 || k < strarr.length || k <= 0){
+        return "";
+    }
+    let elementLengths = [];
+    for (let i = 0; i < strarr.length; i++) {
+        elementLengths.push(strarr[i].length);
+    }
+    let longestElement = elementLengths.indexOf(Math.max(...elementLengths));
+    if ((strarr[longestElement] + strarr[longestElement + 1]) < (strarr[longestElement] + strarr[longestElement - 1])) {
+        return strarr[longestElement] + strarr[longestElement + 1]
+    } else {
+        return strarr[longestElement] + strarr[longestElement - 1]
+    }
+}
+
+
+console.log(longestConsec(["zone", "abigail", "theta", "form", "libe", "zas"], 2)) // "abigailtheta")
